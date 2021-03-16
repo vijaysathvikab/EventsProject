@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    background: #eee;
+    
+}
+
+.wrap{
+    
+    height: 100%;
+    
+    margin-left: 8%;
+    margin-top: 10%;
+     margin-right: 5%; 
+    justify-content: left;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+.wrap-2{
+    
+    justify-content:left;
+    position: relative;
+    
+    
+    
+    
+
+
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.6);
+    transition: 0.5s;
+    image-orientation: center;
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    image-orientation: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.addCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.3);
+    transition: 0.5s;
+    image-orientation: center;
+    width: 60%;
+    height: 145px;
+    margin-left: 4.5%;
+    margin-top: 5%;
+    text-align: center;
+    border-radius: 13px;
+    background: #fff;
+    justify-content: center;
+}
+.cardsAdded {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.3);
+    transition: 0.5s;
+    width: 88%;
+    height: 160px;
+    margin-left: 16%;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* text-align: center; */
+    border-radius: 13px;
+    background: #fff;
+    /* justify-content: center; */
+}
+.all-added-event-cards{
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    margin-left: 20%;
+    justify-content: center;
+    margin-bottom: 30px;
+    z-index: 3;
+}
+.left-side-stuff{
+
+    top: 0;
+    position: relative;
+}
+
+.addcardtext{
+    margin: 0;
+  position: relative;
+  top: 25%;
+  
+}
+.addcard-btn{
+    margin: 0;
+  position: relative;
+  top: 35%;
+}
+
+.addCard-button{
+    background: #3949AB;
+    color: #fff
+}
+
+
+
+
+.addtotalbudget-button{
+    
+    margin-top: 3%;
+    background: #3949AB;
+    color: #fff;
+    position: relative;
+    width: 18%;
+    margin-left: 8%;
+}
+.changetotalbudget-button{
+    
+    margin-top: 1%;
+    background: #3949AB;
+    position: relative;
+    color: #fff;
+    width: 18%;
+    margin-left: 8%;
+}
+
+.informationcard{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.3);
+    transition: 0.5s;
+    width: 20%;
+    position: relative;
+    margin-left: 8%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    align-items: center;
+    width:18%;
+    background: #fff;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+
+nav{
+    background-color: #563d7c;
+    color:#fff;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+}
+
+nav li a:hover{
+    color: #fc4d4d;
+    text-decoration: none;
+}
+
+
+.bg-modal-addtotalbudget{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    display: none;
+    z-index: 10;
+}
+.bg-modal-addeventexpense{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    display: none; 
+}
+
+.bg-modal-deleteevent{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    display: none; 
+}
+
+
+/* .modal-content-addeventexpense{
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: white;
+    position: relative;
+
+} */
+
+.modal-content{
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    
+    background-color: white;
+    position: relative;
+}
+
+.addtotalbudgetsubmit-btn{
+    margin-top: 1%;
+    background: #3949AB;
+    color: #fff;
+    border-radius: 15px;
+    margin: 15px;
+    margin-left: 35%;
+    
+}
+.addeventexpensesubmit-btn{
+    margin-top: 1%;
+    background: #3949AB;
+    width: 100%;
+    color: #fff;
+    border-radius: 15px;
+    
+    
+    
+    
+}
+.bg-modal-changetotalbudget{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    display: none;
+    z-index: 10;
+}
+
+.changetotalbudgetsubmit-btn{
+    margin-top: 1%;
+    background: #3949AB;
+    color: #fff;
+    border-radius: 15px;
+    margin: 15px;
+    margin-left: 35%;
+    
+}
+
+.deleteeventsubmit-btn{
+    margin-top: 1%;
+    background: #3949AB;
+    color: #fff;
+    border-radius: 15px;
+    margin: 15px;
+    margin-left: 35%;
+}
+
+.bg-modal-addevent{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    display: none;
+    z-index: 10;
+}
+
+.modal-content-addevent {
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    
+    background-color: white;
+    position: relative;
+}
+
+.addeventsubmit-btn{
+    margin-top: 10%;
+    background: #3949AB;
+    color: #fff;
+    border-radius: 15px;
+    width: 45%;
+    margin-left: 13%;
+    
+    
+}
+
+.uploadphotobutton{
+    margin-top: 10%;
+    background: #3949AB;
+    color: #fff;
+    border-radius: 15px;
+    width: 100%;
+    position: relative;
+    
+    display: none; 
+}
+
+input
+{
+    outline: none;
+    border: none;
+}
+input:focus::-webkit-input-placeholder
+{
+    border-color: transparent !important;
+}
+input::-webkit-input-placeholder
+{
+    color: #adadad;
+}
+
+.wrap-input
+{
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 38px;
+    
+    
+
+}
+
+.addevent-form{
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.wrap-input-1{
+    width: 70%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 38px;
+
+}
+.input
+{
+ font-family: 'Poppins';
+ font-size: 15px;
+ color: #4caf50;
+ line-height: 1.2;
+ display: block;
+ width: 94%;
+ height: 45px;
+ background: transparent;
+ padding: 0 5px;   
+}
+.focus-input
+{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.focus-input:before
+{
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4caf50;
+    transition: all 0.4s;
+}
+
+.focus-input:after
+{
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: #999999;
+    line-height: 1.2;
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    padding-left: 5px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+}
+.input:focus + .focus-input:after
+{
+    top:-15px;
+}
+.input:focus + .focus-input:before
+{
+    width: 100%;
+}
+
+.has-val.input + .focus-input::after
+{
+    top:-15px;
+}
+.has-val.input:focus + .focus-input:before
+{
+    width: 100%;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+}
+
+.changeclose{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+}
+
+.eventexpensepopupclose{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.addeventpopupclose{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    
+}
+.deleteeventpopupclose{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    
+}
+
+.deleteeventpopupclose:hover{
+    color: royalblue;
+    
+}
+.addeventpopupclose:hover{
+    color: royalblue;
+    
+}
+.eventexpensepopupclose:hover{
+    color: royalblue;
+    
+}
+.changeclose:hover{
+    color: royalblue;
+    
+}
+
+.close:hover{
+    color: royalblue;
+    
+}
+
+.para{
+    margin-left: 66%; 
+    margin-top: -18%;
+}
+
+#imagefile{
+    display: none;
+}
+
+
+#choosefiletext{
+    justify-content:center;
+    text-align: center;
+    color: #ddd;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    background:rgba(0, 0, 0, 0.7);
+    left: 0;
+    bottom:0;
+    margin-top:10px;
+    display: none;
+    cursor: pointer;
+}
+
+
+#logout{
+    cursor: pointer;
+
+}
+#logout:hover{
+    color: rgb(192, 24, 75);
+}

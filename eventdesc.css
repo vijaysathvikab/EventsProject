@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    
+        background: rgb(197, 197, 197);
+}
+
+nav{
+    background-color: #563d7c;
+    color:#fff;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+}
+
+nav li a:hover{
+    color: #fc4d4d;
+    text-decoration: none;
+}
+
+
+#logout{
+    cursor: pointer;
+
+}
+#logout:hover{
+    color: rgb(192, 24, 75);
+}
+
+.Cards{
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.speakerscard{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.6);
+    transition: 0.5s;
+    image-orientation: center;
+    width: 45%;
+    height:  500px;
+    border-radius: 15%;
+    overflow: hidden;
+    background: #ddd;
+    image-orientation: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.guestscard{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.6);
+    transition: 0.5s;
+    image-orientation: center;
+    width: 45%;
+    height: 500px;
+    margin-left: 5%;
+    border-radius: 15%;
+    overflow: hidden;
+    background: #ddd;
+    image-orientation: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.addspeakerbutton{
+    background-color: #3949AB;
+    color: #fff; 
+    border-radius: 8%;
+    margin-top: 3%;
+    margin-right: 22.5%;
+    position: relative;
+}
+
+.addguestbutton{
+    background-color: #3949AB;
+    color: #fff; 
+    border-radius: 8%;
+    margin-top: 3%;
+    position: relative;
+    margin-left: 22.5%;
+}
+
+.addedguestscard{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.6);
+    transition: 0.5s;
+    image-orientation: center;
+    width: 90%;
+    padding: 5px;
+    height: 75px;
+    margin-left: 5%;
+    margin-right: 10%;
+    border-radius: 50px;
+    margin-top: 3%;
+    overflow: hidden;
+    background: #fff;
+    image-orientation: center;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+.addedspeakerscard{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.6);
+    transition: 0.5s;
+    image-orientation: center;
+    margin-top: 3%;
+    margin-right: 10%;
+    width: 90%;
+    padding: 5px;
+    height: 75px;
+    margin-left: 5%;
+    border-radius: 50px;
+    overflow: hidden;
+    background: #fff;
+    image-orientation: center;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.bg-modal-addspeakers{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    display: none;
+    z-index: 10;
+}
+
+.bg-modal-addguests{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    display: none;
+    z-index: 10;
+}
+
+.modal-content-addspeakers{
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    
+    background-color: white;
+    position: relative;
+}
+
+input
+{
+    outline: none;
+    border: none;
+}
+input:focus::-webkit-input-placeholder
+{
+    border-color: transparent !important;
+}
+input::-webkit-input-placeholder
+{
+    color: #adadad;
+}
+
+.wrap-input
+{
+    width: 75%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 38px;
+    margin-left: 10%;
+    
+    
+
+}
+
+.input
+{
+ font-family: 'Poppins';
+ font-size: 15px;
+ color: #4caf50;
+ line-height: 1.2;
+ display: block;
+ width: 94%;
+ height: 45px;
+ background: transparent;
+ padding: 0 5px;   
+}
+.focus-input
+{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.focus-input:before
+{
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4caf50;
+    transition: all 0.4s;
+}
+
+.focus-input:after
+{
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: #999999;
+    line-height: 1.2;
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    padding-left: 5px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+}
+.input:focus + .focus-input:after
+{
+    top:-15px;
+}
+.input:focus + .focus-input:before
+{
+    width: 100%;
+}
+
+.has-val.input + .focus-input::after
+{
+    top:-15px;
+}
+.has-val.input:focus + .focus-input:before
+{
+    width: 100%;
+}
+
+.closeaddspeakers{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+}
+
+.closeaddguests{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+}
+
+.closeaddspeakers:hover{
+    color: royalblue;
+    
+}
+
+.closeaddguests:hover{
+    color: royalblue;
+    
+}
+
+.addspeakersubmit-btn{
+    margin-top: 1%;
+    background: #3949AB;
+    color: #fff;
+    border-radius: 15px;
+    margin: 15px;
+    margin-left: 40%;
+    
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
