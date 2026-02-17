@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login">
+            <div class="wrap-login">
+                <form class="login-form validate-form" action="/auth/login" method="post">
+                    <span class="login-form-title">
+                        Welcome
+                    </span>
+
+                    <div class="wrap-input validate-input" data-validate="Enter valid email">
+                        <input type="text" id="email-input" class="input" name="email">  
+                        <span class="focus-input" data-placeholder="Email"></span>         
+                    </div>
+
+                    <div class="wrap-input validate-input" data-validate="Enter password">
+                        <span class="btn-show-pass">
+                            <i class="zmdi zmdi-eye"></i>
+                        </span>
+                        <input type="password" class="input" name="password">  
+                        <span class="focus-input" data-placeholder="Password"></span>         
+                    </div>
+
+                    <div class="container-login-form-btn">
+                        <div class="wrap-login-form-btn">
+                            <button class="login-form-btn"> Login </button>
+                        </div>
+                    </div>
+                    {{#if message}}
+            <h4 id="errormsg" class="alert alert-info mt-4">{{message}}</h4>
+            <script>
+            setTimeout('$("#errormsg").hide()',3500);
+        </script>
+        {{/if}}   
+                    <div class="text-centre">
+                        <span class="txt1">
+                            Don't have an account?
+                        </span>
+                        <a class="txt2" href="/register">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+            <br>
+            
+        </div> 
+        
+    </div>
+    
+
+    <script src="../jquery.js"></script>
+    <script src="../JS_main.js"></script>
+</body>
+</html>
